@@ -1,0 +1,1216 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime/"
+     xml:base="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:PEC2Jaime="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#sameAs -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#sameAs"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#boolean -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#boolean"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#dateTime -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#decimal -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#integer -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#string -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasOrigin -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasOrigin">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Origin"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasReviewComment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasReviewComment">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#ReviewComment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasReviewRating -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasReviewRating">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Rating"/>
+        <rdfs:comment>Evaluation of the whole flight.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasReviewRecommended -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasReviewRecommended">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Recommended"/>
+        <rdfs:comment>Indicates whether or not the client recommends the flight he/she has taken.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasReviewTitle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasReviewTitle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#ReviewTitle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasSeatComfort -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasSeatComfort">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Services"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#SeatComfort"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasSeatType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasSeatType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#SeatType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasTravellerCountry -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasTravellerCountry">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Traveller"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerCountry"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasTravellerName -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasTravellerName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Traveller"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerName"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasTravellerType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasTravellerType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Traveller"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasTripVerification -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasTripVerification">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TripVerification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#operatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#operatedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Airline"/>
+        <rdfs:comment>Company that operated the flight</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#reviewOfFlight -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#reviewOfFlight">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#reviewOfTraveller -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#reviewOfTraveller">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Traveller"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerCountry -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerCountry">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerCountry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#rating -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#rating">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Rating"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Provides the rating in numerical format. It is to quantify the review.</rdfs:comment>
+        <rdfs:label>Rating</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#reviewComment -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#reviewComment">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#ReviewComment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The comment of the review made by the customer is added.</rdfs:comment>
+        <rdfs:label>Review Comment</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#reviewDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#reviewDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#ReviewDate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#reviewTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#reviewTitle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#ReviewTitle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#seatComfortRating -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#seatComfortRating">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#SeatComfort"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Indicates the customer&apos;s rating of the seats on the flight.</rdfs:comment>
+        <rdfs:label>Seat Comfort Rating</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Aircraft -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Aircraft">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight"/>
+        <rdfs:comment>Class with aircraft information.</rdfs:comment>
+        <rdfs:label>Aircraft</rdfs:label>
+        <rdfs:sameAs>https://dbpedia.org/ontology/aircraft</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Airline -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Airline">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#CabinService -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#CabinService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Services"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#CabinStaff -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#CabinStaff">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Services"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#DateFlown -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#DateFlown">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Destination -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Destination">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasOrigin"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Origin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#operatedBy"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Airline"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Class with information related to the flight.</rdfs:comment>
+        <rdfs:label>Flight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#FoodBeverages -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#FoodBeverages">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Services"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Ground -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Ground">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Services"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#InflightEntertainment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#InflightEntertainment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Services"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Origin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Origin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Rating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Rating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review"/>
+        <rdfs:comment>Numerical value related to the flight.</rdfs:comment>
+        <rdfs:label>Rating</rdfs:label>
+        <rdfs:sameAs>https://dbpedia.org/ontology/rating</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Recommended -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Recommended">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasReviewRating"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Rating"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasReviewRecommended"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Recommended"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasSeatComfort"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#SeatComfort"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Class containing all instances related to customer satisfaction.</rdfs:comment>
+        <rdfs:label>Review</rdfs:label>
+        <rdfs:sameAs>https://dbpedia.org/ontology/review</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#ReviewComment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#ReviewComment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#ReviewDate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#ReviewDate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#ReviewTitle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#ReviewTitle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#SeatComfort -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#SeatComfort">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Services"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#SeatType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#SeatType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Services -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Services">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Traveller -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Traveller">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasTravellerName"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerName"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasTravellerType"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerCountry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasTravellerType"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerName"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerCountry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerCountry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Traveller"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerName -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerName">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Traveller"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Traveller"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TripVerification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TripVerification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#WifiConnectivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#WifiConnectivity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Services"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Belgium -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Belgium">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerCountry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Boeing_737 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Boeing_737">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Aircraft"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Boeing_737-800 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Boeing_737-800">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Aircraft"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Business -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Business">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#BusinessClass -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#BusinessClass">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#SeatType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#CoupleLeisure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#CoupleLeisure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Denmark -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Denmark">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerCountry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#EconomyClass -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#EconomyClass">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#SeatType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#FamilyLeisure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#FamilyLeisure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#FirstClass -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#FirstClass">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#SeatType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight119 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight119">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight"/>
+        <PEC2Jaime:operatedBy rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Ryanair"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight2296 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight2296">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight"/>
+        <PEC2Jaime:operatedBy rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#QatarAirways"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight2355 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight2355">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight"/>
+        <PEC2Jaime:operatedBy rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#QatarAirways"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight27 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight27">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight"/>
+        <PEC2Jaime:operatedBy rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Ryanair"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight28 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight28">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight"/>
+        <PEC2Jaime:operatedBy rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#QatarAirways"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight29 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight29">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight"/>
+        <PEC2Jaime:operatedBy rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Ryanair"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#FlightRayanair1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#FlightRayanair1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight"/>
+        <PEC2Jaime:operatedBy rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Ryanair"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Germany -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Germany">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerCountry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Gothenburg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Gothenburg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Origin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Hungary -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Hungary">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerCountry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Ireland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Ireland">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerCountry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#N_ARecommended -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#N_ARecommended">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Recommended"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#NotRecommended -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#NotRecommended">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Recommended"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Not_Verified -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Not_Verified">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TripVerification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Pakistan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Pakistan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerCountry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Portugal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Portugal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerCountry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#QatarAirways -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#QatarAirways">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Airline"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Recommended -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Recommended">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Recommended"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review"/>
+        <PEC2Jaime:hasSeatType rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#EconomyClass"/>
+        <PEC2Jaime:hasTravellerCountry rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Sweden"/>
+        <PEC2Jaime:hasTripVerification rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Verified"/>
+        <PEC2Jaime:reviewOfFlight rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#FlightRayanair1"/>
+        <PEC2Jaime:rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8</PEC2Jaime:rating>
+        <PEC2Jaime:reviewComment>I found it was an ok airline with a good crew and ok airplanes. The seatings are good enough for a 1:30hr trip and the food was in a reasonable price (as same as</PEC2Jaime:reviewComment>
+        <PEC2Jaime:reviewTitle>found it was an ok airline</PEC2Jaime:reviewTitle>
+        <PEC2Jaime:seatComfortRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</PEC2Jaime:seatComfortRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review119 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review119">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review"/>
+        <PEC2Jaime:hasReviewRecommended rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Recommended"/>
+        <PEC2Jaime:hasSeatType rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#EconomyClass"/>
+        <PEC2Jaime:hasTravellerCountry rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Portugal"/>
+        <PEC2Jaime:hasTripVerification rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Verified"/>
+        <PEC2Jaime:reviewOfFlight rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight119"/>
+        <PEC2Jaime:rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</PEC2Jaime:rating>
+        <PEC2Jaime:reviewComment>Their legroom is better than other low cost airlines and national flag companies. It is a breath of fresh air to fly on well managed airline. It is good to know one can count on them for the maintenance of competitive air fares on the routes they decide to operate.</PEC2Jaime:reviewComment>
+        <PEC2Jaime:reviewTitle>a breath of fresh ai</PEC2Jaime:reviewTitle>
+        <PEC2Jaime:seatComfortRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</PEC2Jaime:seatComfortRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review2296 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review2296">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review"/>
+        <PEC2Jaime:hasReviewRecommended rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#NotRecommended"/>
+        <PEC2Jaime:hasSeatType rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#BusinessClass"/>
+        <PEC2Jaime:hasTravellerCountry rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#United_Kingdom"/>
+        <PEC2Jaime:hasTripVerification rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Not_Verified"/>
+        <PEC2Jaime:reviewOfFlight rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight2296"/>
+        <PEC2Jaime:rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</PEC2Jaime:rating>
+        <PEC2Jaime:reviewComment>London to Doha in business on the new Airbus. Our flight attendants English wasn&apos;t very good and they were not as efficient as other airlines. My dinner was overcooked and too salty. Staff were very kind and gave me a different meal. I had issues with my TV. It kept cutting out the entire flight. The beds are rights next to one and other. I was lucky as I was traveling with my husband but if I was sleeping that close to a stranger I wouldn&apos;t have enjoyed it. With other airlines you can put up a screen which you can&apos;t do on this plane. Worst inflight TV selection I&apos;ve seen on a plane. Old movies and only a few new western release movies. Arrived into Doha for a 6 hour stop over and the Business Lounge is already looking very tired. Qatar would not be my first choice next time I fly. Up side: Amazing pyjamas and toiletry bag.</PEC2Jaime:reviewComment>
+        <PEC2Jaime:reviewTitle>Qatar Airways customer review</PEC2Jaime:reviewTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review2355 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review2355">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review"/>
+        <PEC2Jaime:hasReviewRecommended rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#NotRecommended"/>
+        <PEC2Jaime:hasSeatType rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#BusinessClass"/>
+        <PEC2Jaime:hasTravellerCountry rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Pakistan"/>
+        <PEC2Jaime:hasTripVerification rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Not_Verified"/>
+        <PEC2Jaime:reviewOfFlight rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight2355"/>
+        <PEC2Jaime:rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</PEC2Jaime:rating>
+        <PEC2Jaime:reviewComment>KHI-DOH-JFK-DOH-KHI August 2013. Staff service still remains excellent. On JFK-DOH sector the cabin crew were the most efficient and helpful crew I have encountered in 20 years. On my last leg of journey the entertainment system was not working. Seat has limited recline. QR needs to improve or may lose the Business class segment of it&apos;s loyal customers. Premier lounge at Doha is still excellent but Premier lounge duty free shop has very limited selection of products.</PEC2Jaime:reviewComment>
+        <PEC2Jaime:reviewTitle>Qatar Airways customer review</PEC2Jaime:reviewTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review27 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review27">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review"/>
+        <PEC2Jaime:hasReviewRecommended rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#NotRecommended"/>
+        <PEC2Jaime:hasSeatType rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#EconomyClass"/>
+        <PEC2Jaime:hasTravellerCountry rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#United_Kingdom"/>
+        <PEC2Jaime:hasTripVerification rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Verified"/>
+        <PEC2Jaime:reviewOfFlight rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight27"/>
+        <PEC2Jaime:rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</PEC2Jaime:rating>
+        <PEC2Jaime:reviewComment>Horrible, avoid at all costs. 28.8.2023 they cancelled my flight, they let me queue up for 7 hours. Refused to pay for transport and accommodation until my next flight 2 days later.</PEC2Jaime:reviewComment>
+        <PEC2Jaime:reviewTitle>let me queue up for 7 hours</PEC2Jaime:reviewTitle>
+        <PEC2Jaime:seatComfortRating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</PEC2Jaime:seatComfortRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review28 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review28">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review"/>
+        <PEC2Jaime:hasReviewRecommended rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#N_ARecommended"/>
+        <PEC2Jaime:hasSeatType rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#EconomyClass"/>
+        <PEC2Jaime:hasTravellerCountry rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Germany"/>
+        <PEC2Jaime:hasTripVerification rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Not_Verified"/>
+        <PEC2Jaime:reviewOfFlight rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight28"/>
+        <PEC2Jaime:rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</PEC2Jaime:rating>
+        <PEC2Jaime:reviewComment>Check in at Zurich airport friendly and swift. Prime Class lounge was rather underwhelming with poor breakfast choices, but nice outdoor seating. Flight to Doha was downgraded from Qsuite to normal seating quiet some time ago. Flight to Doha was very good with great catering and good service. Arrival in Doha at a remote stand. The Al Safwa lounge food has improved. Flight from Doha to BKK by the all Thai cabin crew was great, catering not as good as the previous flight.  After all, reasonably ok flights, but nothing special considering what I paid for.</PEC2Jaime:reviewComment>
+        <PEC2Jaime:reviewTitle>Al Safwa lounge food has improved</PEC2Jaime:reviewTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review29 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review29">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review"/>
+        <PEC2Jaime:hasReviewRecommended rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#NotRecommended"/>
+        <PEC2Jaime:hasSeatType rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#EconomyClass"/>
+        <PEC2Jaime:hasTravellerCountry rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Portugal"/>
+        <PEC2Jaime:hasTripVerification rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Not_Verified"/>
+        <PEC2Jaime:reviewOfFlight rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight29"/>
+        <PEC2Jaime:rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</PEC2Jaime:rating>
+        <PEC2Jaime:reviewComment>First time on 8022 and, although a nice aircraft and quieter than the 800, the seating is appalling. We were in row 26 and the pitch I measured at 27&quot; - the least I have ever had to suffer. My knees were literally bruised blue afterwards and I did not buy a meal because it would have been impossible to eat it. I also had to wear my reading spectacles to read the information on the seat in front. Flight was on time and crew pleasant.</PEC2Jaime:reviewComment>
+        <PEC2Jaime:reviewTitle>seating is appalling</PEC2Jaime:reviewTitle>
+        <PEC2Jaime:seatComfortRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</PEC2Jaime:seatComfortRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Ryanair -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Ryanair">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Airline"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#SoloLeisure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#SoloLeisure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Sweden -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Sweden">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerCountry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#United_Arab_Emirates -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#United_Arab_Emirates">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerCountry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#United_Kingdom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#United_Kingdom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerCountry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#United_States -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#United_States">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerCountry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Verified -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Verified">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TripVerification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#TravellerCountry">
+        <rdfs:comment>Indicates the nationality of the traveler.</rdfs:comment>
+        <rdfs:label>Traveller Country</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime/r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime/f">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Vuelos que han sido confirmados y operados por Ryanair</rdfs:comment>
+        <rdfs:label>S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime/f"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasTripVerification"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime/f"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Verified"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select"/>
+                        <swrl:arguments rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime/f"/>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>La cantidad de vuelos que han sido operados por Ryanair</rdfs:comment>
+        <rdfs:label>S2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime/f"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#operatedBy"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime/f"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Ryanair"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select"/>
+                        <swrl:arguments rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime/f"/>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Qué cantidad de pasajeros recomeinda Ryanair después de volar</rdfs:comment>
+        <rdfs:label>S4</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Review"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime/r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#hasReviewRecommended"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime/r"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Recommended"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Flight"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime/f"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#reviewOfFlight"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime/r"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime/f"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#operatedBy"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime/f"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime#Ryanair"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select"/>
+                        <swrl:arguments rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime/f"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/jaime/ontologies/2024/3/PEC2Jaime/r"/>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
